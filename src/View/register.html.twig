@@ -1,0 +1,113 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <main class="main-content">
+        <div class="container">
+            <div class="page">
+                <div class="breadcrumbs d-flex">
+                    <a href="/">Accueil</a>
+                    <p class="arrow d-inline-block"><img src="/assets/images/arrow.png">
+                        <span>Inscription</span>
+                    </p>
+                </div>
+                <div class="content">
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-md-4 d-flex flex-column">
+                            <h2>INSCRIPTION</h2>
+
+                            <form class="contact-form" method="post" accept-charset="UTF-8">
+                                <!-- FirstName input -->
+                                <div class="input-group mb-3 flex-nowrap">
+                                    <span class="input-group-text" id="basic-addon1">
+                                        <i class="fa-solid fa-user" style="color: #9198AF;"></i>
+                                    </span>
+                                    <input type="text" id="firstname" name="firstname" class="form-control mb-0"
+                                           placeholder="Prénom..."
+                                           aria-label="Username" aria-describedby="basic-addon1"/>
+                                </div>
+                                {% if error.firstname is not empty %}
+                                    <p style="color: red">{{ error['firstname'] }}</p>
+                                {% endif %}
+
+                                <!-- lastname input -->
+
+                                <div class="input-group mb-3 flex-nowrap">
+                                <span class="input-group-text" id="basic-addon1">
+                                    <i class="fa-solid fa-user" style="color: #9198AF;"></i>
+                                </span>
+                                    <input type="text" id="lastname" name="lastname" class="form-control mb-0"
+                                           placeholder="Nom..." aria-label="Username"
+                                           aria-describedby="basic-addon1"/>
+                                </div>
+                                {% if error.lastname is not empty %}
+                                    <p style="color: red">{{ error['lastname'] }}</p>
+                                {% endif %}
+
+
+                                <!-- Email input -->
+
+                                <div class="input-group mb-3 flex-nowrap">
+                                    <span class="input-group-text" id="basic-addon1">
+                                        <i class="fa-regular fa-envelope" style="color: #9198AF;"></i>
+                                    </span>
+                                    <input type="email" id="email" name="email" class="form-control mb-0"
+                                           placeholder="Email..." aria-label="Username" aria-describedby="basic-addon1">
+                                </div>
+                                {% if error.email is not empty %}
+                                    <p style="color: red">{{ error['email'] }}</p>
+                                {% endif %}
+
+
+                                <!-- birthdate input -->
+                                <div class="input-group mb-3 flex-nowrap">
+                                <span class="input-group-text" id="basic-addon1">
+                                <i class="fa-solid fa-cake-candles" style="color: #9198AF;"></i>
+                                </span>
+                                    <input type="date" id="birthday" name="birthday" class="form-control mb-0"
+                                           placeholder="Date de naissance..."
+                                           aria-label="Username" aria-describedby="basic-addon1"/>
+                                </div>
+                                {% if error.birthday is not empty %}
+                                    <p style="color: red">{{ error['birthday'] }}</p>
+                                {% endif %}
+
+                                <!-- Password input -->
+                                <div class="input-group mb-3 flex-nowrap">
+                                <span class="input-group-text" id="basic-addon1">
+                                <i class="fa-solid fa-cake-candles" style="color: #9198AF;"></i>
+                                </span>
+                                    <input type="password" id="password" name="password" class="form-control mb-0"
+                                           placeholder="Mot de passe"
+                                           aria-label="Username" aria-describedby="basic-addon1"/>
+                                </div>
+
+                                {% if error.password is not empty %}
+                                    <p style="color: red">{{ error['password'] }}</p>
+                                {% endif %}
+
+                                    <!-- Checkbox for general condition -->
+                                    <div class="form-check mb-3">
+                                        <input name="checkbox" class="form-check-input" type="checkbox" value="1" id="flexCheckDefault">
+                                        <label class="form-check-label ps-2" for="flexCheckDefault"> J'ai lu et accepte
+                                            <a href="#"> les condition générales</a> <a href="#">et la politique de confidentialité </a>
+                                        </label>
+
+                                    </div>
+                                {% if error.checkbox is not empty %}
+                                    <p style="color: red">{{ error['checkbox'] }}</p>
+                                {% endif %}
+                                <!-- Submit button -->
+                                <button type="submit" class="btn btn-outline-warning d-grid gap-2 col-6 mx-auto">S'INSCRIRE</button>
+                            </form>
+
+                            <h6>Vous avez déjà un compte <a class="DG-color-yellow" href="/user/login"> connectez vous !</a></h6>
+                        </div>
+                        <div class="col-md-7 col-md-offset-1 d-flex align-items-center">
+                            <img class="rounded" src="/assets/images/movie.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock %}

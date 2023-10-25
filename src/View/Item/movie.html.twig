@@ -1,0 +1,30 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <section>
+    <h1>Resa</h1>
+        <h1>-- {{ cinemashow[0].title }} --</h1>
+        <p>-- {{ cinemashow[0].description }} --</p>
+        <p>-- {{ cinemashow[0].duration }} minutes--</p>
+        <p>-- {{ cinemashow[0].durationStart }} h--</p>
+    </section>
+    <section class="d-flex justify-content-between">
+        {% for cs in cinemashow %}
+            <h2>{{ cs.id }}</h2>
+            <ul>
+                <li>{{ cs.startDate }}</li>
+                <li>{{ cs.endDate }}</li>
+                <li>{{ cs.seatAvaible }}</li>
+                <li>{{ cs.price }}</li>
+                <li>{{ cs.id_room }}</li>
+                <form method="post" name="booking_form">
+                    <input type="hidden" value="{{ cs.id }}" name="csId">
+                    <input type="number" name="nbr_seat_0">
+                    <input type="number" name="nbr_seat_25">
+                    <input type="number" name="nbr_seat_50">
+                    <input type="submit" value="Valider">
+                </form>
+            </ul>
+        {% endfor %}
+    </section>
+{% endblock %}

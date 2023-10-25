@@ -1,0 +1,80 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <main class="main-content">
+        <div class="container">
+            <div class="page">
+                <div class="breadcrumbs d-flex">
+                    <a href="/">Accueil</a>
+                    <p class="arrow d-inline-block"><img src="/assets/images/arrow.png">
+                        <span>A propos</span>
+                    </p>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="row">
+                            <figure><img class="rounded" src="assets/images/movie-theater.jpg" alt="figure image"></figure>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+
+                        <p class="leading">La vision et les inspirations de CINETECH.</p>
+                        <p>Notre vision est de créer un espace en ligne dynamique et engageant dédié à la célébration du
+                            cinéma sous toutes ses formes. Nous aspirons à devenir la destination privilégiée des
+                            cinéphiles du monde entier, offrant un contenu diversifié et de qualité, des critiques de
+                            films approfondies, des actualités cinématographiques à jour, des interviews exclusives et
+                            des recommandations personnalisées. Notre passion pour le cinéma nous pousse à partager la
+                            magie de l'art cinématographique, à susciter des discussions animées et à cultiver une
+                            communauté de cinéphiles enthousiastes. Nous croyons que le cinéma a le pouvoir de
+                            transcender les frontières culturelles, d'inspirer l'imagination et d'éveiller les émotions.
+                            Nous nous engageons à nourrir cette passion et à offrir une expérience cinématographique
+                            enrichissante à nos visiteurs.".</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12 mb-3">
+                        <h2 class="section-title">Notre aspiration</h2>
+                        <p>L'une de nos aspirations est d'offrir du divertissement au public. Il s'agit de créer un
+                            espace où les gens peuvent s'évader de la réalité et vivre des émotions en regardant des
+                            films sur grand écran. </p>
+
+                        <p>Notre cinéma a pour objectif d'éduquer et de sensibiliser notre public en diffusant des films
+                            qui suscitent la réflexion, décrivent des événements historiques ou culturels, ou mettent en
+                            lumière des questions sociales importantes.</p>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2 class="section-title">Nos cartes de réduction</h2>
+                        <!-- card reduction-->
+                        <div class="col-md-6 d-flex justify-content-center m-auto mb-3">
+                            <div class="card" style="width: 18rem;height: 15rem">
+                                <img src="assets/images/film-about.jpg" class="card-img-top dg-card-img-top" alt="bobine de film">
+                                <div class="card-body">
+                                    <h3 class="card-title fw-bold">Carte de réduction - 14 ans</h3>
+                                    <p class="card-text">Les enfants de moins de 14 ans bénéficient de tarifs réduits
+                                        -50 %</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 d-flex justify-content-center m-auto mb-3">
+                            <div class="card" style="width: 18rem;height: 15rem">
+                                <img src="assets/images/bobine.jpg" class="card-img-top dg-card-img-top" alt="bobine de film">
+                                <div class="card-body">
+                                    <h3 class="card-title fw-bold">Carte de réduction - 26 ans</h3>
+                                    <p class="card-text dg-card-text">Les jeunes de moins de 26 ans bénéficient de tarifs réduits -30
+                                        %</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div> <!-- .container -->
+    </main>
+{% endblock %}

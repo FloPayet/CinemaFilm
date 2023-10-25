@@ -1,0 +1,30 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <div class="container">
+        <div id="site-content">
+            <main class="main-content">
+                <div class="container">
+                    <div class="page">
+                        <div class="breadcrumbs d-flex">
+                            <a href="/">Accueil</a>
+                            <p class="arrow d-inline-block"><img src="/assets/images/arrow.png">
+                                <span>Ajout d'un film</span>
+                            </p>
+                        </div>
+                        <form action="{{ app.request.uri }}" method="get" class="mb-5" id="searchForm">
+                            <label for="searchInput">Rechercher un film :</label>
+                            <input type="search" id="searchInput" name="q" placeholder="Entrez votre recherche ici" required>
+                            <input type="submit" value="Rechercher">
+                        </form>
+                        <div class="movie-list">
+                        </div> <!-- .movie-list -->
+                    </div>
+                </div> <!-- .container -->
+            </main>
+        </div>
+        <script src="/assets/js/config.js"></script>
+        <script src="/assets/js/availableMovies.js"></script>
+
+    </div>
+{% endblock %}
